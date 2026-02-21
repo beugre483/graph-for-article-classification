@@ -18,7 +18,7 @@ except FileNotFoundError as e:
 le = LabelEncoder()
 true_labels = le.fit_transform(df['true_label'])
 
-# ── CALCUL NMI ET ARI ────────────────────────────────────────────────────────
+# CALCUL NMI ET ARI 
 algorithmes = ['louvain', 'label_propagation', 'spectral_clustering']
 
 print("=" * 50)

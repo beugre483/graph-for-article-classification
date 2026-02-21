@@ -1,0 +1,402 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{cite}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\geometry{margin=2.5cm}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10}
+}
+
+\title{
+    \vspace{-1cm}
+    \Large \textbf{Thematic Community Detection in Scientific Articles Using Graph Mining} \\
+}
+\author{
+    Niamba Beugre \and Doumbia Abdoulaye
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Abstract}
+% ─────────────────────────────────────────────────────────────────────────────
+
+This project investigates whether graph-based community detection algorithms can automatically recover thematic groupings of scientific articles without any supervision. Starting from a corpus of 1,600 abstracts collected from arXiv across 8 distinct scientific domains — including Natural Language Processing, Computer Vision, Astrophysics, and Econometrics — we transform each abstract into a dense numerical representation using Sentence-BERT embeddings. A similarity graph is then constructed by connecting each article to its $k=10$ most similar neighbors based on cosine similarity, resulting in a graph of 1,600 nodes and approximately 11,990 edges. Three community detection algorithms are applied to this graph: the Louvain method, Label Propagation, and Spectral Clustering. The detected communities are evaluated against the ground-truth arXiv categories using two standard clustering metrics: Normalized Mutual Information (NMI) and Adjusted Rand Index (ARI). Results show that Louvain achieves the best performance with NMI $= 0.8033$ and ARI $= 0.7641$, followed closely by Spectral Clustering. We further argue that the graph-based approach captures transitive and structural relationships between articles that pure pairwise cosine similarity cannot, providing richer community structure. These findings demonstrate the potential of graph mining for large-scale scientific document organization and thematic discovery.
+
+\vspace{1em}
+\noindent\textbf{Keywords:} graph mining, community detection, Sentence-BERT, cosine similarity, Louvain, Spectral Clustering, arXiv, thematic clustering.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Introduction and Motivation}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\subsection{Problem Overview}
+
+The exponential growth of scientific literature has made it increasingly difficult for researchers to navigate and organize knowledge. Platforms such as arXiv host millions of articles across dozens of domains, with thousands of new submissions every week. Manually categorizing these articles is expensive and does not scale. This motivates the development of automated, unsupervised methods for grouping articles by thematic content.
+
+\subsection{Research Questions}
+
+This project aims to answer the following questions:
+
+\begin{enumerate}
+    \item Can graph-based community detection algorithms automatically recover scientific thematic categories from article abstracts?
+    \item Which community detection algorithm performs best on this task?
+    \item Does modeling the problem as a graph offer advantages over directly applying clustering to text embeddings?
+\end{enumerate}
+
+\subsection{Motivation and Applications}
+
+The ability to automatically detect thematic communities in a corpus of documents has numerous practical applications:
+
+\begin{itemize}
+    \item \textbf{Scientific search engines}: grouping related papers to help researchers find relevant work.
+    \item \textbf{Recommendation systems}: recommending papers based on thematic proximity.
+    \item \textbf{Knowledge graph construction}: automatically mapping the structure of a scientific domain.
+    \item \textbf{Trend detection}: identifying emerging research communities over time.
+\end{itemize}
+
+\subsection{Why Graphs?}
+
+A natural baseline for this task would be to compute pairwise cosine similarities between article embeddings and directly apply a clustering algorithm such as $k$-means. However, this approach has important limitations. Cosine similarity captures \emph{local}, pairwise relationships but ignores the \emph{global structure} of the dataset. By modeling articles as nodes in a graph and their similarities as weighted edges, we enable community detection algorithms to exploit \emph{transitive relationships}: if article $A$ is similar to $B$, and $B$ is similar to $C$, the graph captures that $A$ and $C$ likely belong to the same thematic group even if their direct similarity is moderate. This global reasoning is the key advantage of graph-based approaches, and this project empirically validates this claim.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Problem Definition}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\subsection{Notation}
+
+Let $\mathcal{D} = \{d_1, d_2, \ldots, d_n\}$ be a corpus of $n$ scientific articles. Each article $d_i$ is associated with a ground-truth label $y_i \in \mathcal{L}$, where $\mathcal{L}$ is the set of thematic categories. In our setting, $n = 1600$ and $|\mathcal{L}| = 8$.
+
+Let $f : \mathcal{D} \rightarrow \mathbb{R}^m$ be an embedding function that maps each article to a dense vector. We use Sentence-BERT, so $m = 384$.
+
+Let $\mathbf{e}_i = f(d_i) \in \mathbb{R}^{384}$ denote the embedding of article $d_i$.
+
+\subsection{Graph Construction}
+
+We define a weighted undirected graph $G = (V, E, w)$ where:
+\begin{itemize}
+    \item $V = \{v_1, \ldots, v_n\}$ is the set of nodes, one per article.
+    \item $E \subseteq V \times V$ is the set of edges.
+    \item $w : E \rightarrow [0, 1]$ is a weight function.
+\end{itemize}
+
+The cosine similarity between two articles $d_i$ and $d_j$ is defined as:
+\begin{equation}
+    \text{sim}(d_i, d_j) = \frac{\mathbf{e}_i \cdot \mathbf{e}_j}{\|\mathbf{e}_i\| \cdot \|\mathbf{e}_j\|}
+\end{equation}
+
+We construct the graph using a $k$-Nearest Neighbors (KNN) strategy with $k = 10$: for each node $v_i$, we add an edge $(v_i, v_j)$ with weight $w(v_i, v_j) = \text{sim}(d_i, d_j)$ for each of its $k$ most similar neighbors $v_j$.
+
+\subsection{Community Detection Problem}
+
+Given graph $G$, we seek a partition $\mathcal{C} = \{C_1, C_2, \ldots, C_r\}$ of $V$ such that nodes within each community are densely connected, while connections between communities are sparse.
+
+Formally, we aim to maximize the \textbf{modularity} $Q$ of the partition:
+\begin{equation}
+    Q = \frac{1}{2m} \sum_{i,j} \left[ A_{ij} - \frac{k_i k_j}{2m} \right] \delta(c_i, c_j)
+\end{equation}
+where $m = |E|$ is the total number of edges, $A_{ij}$ is the adjacency matrix, $k_i$ is the degree of node $i$, $c_i$ is the community assignment of node $i$, and $\delta(c_i, c_j) = 1$ if $c_i = c_j$, $0$ otherwise.
+
+\subsection{Evaluation Objective}
+
+The quality of the detected partition $\mathcal{C}$ is evaluated by comparing it against the ground-truth partition $\mathcal{Y} = \{Y_1, \ldots, Y_{|\mathcal{L}|}\}$ induced by the arXiv categories, using:
+
+\begin{itemize}
+    \item \textbf{NMI} (Normalized Mutual Information): measures the shared information between two partitions, normalized to $[0, 1]$.
+    \item \textbf{ARI} (Adjusted Rand Index): measures the fraction of correctly grouped pairs, adjusted for chance, in $[-1, 1]$.
+\end{itemize}
+
+\subsection{Problem Hardness}
+
+The problem of maximizing modularity exactly is NP-hard \cite{brandes2007}. Therefore, all algorithms used in this project are heuristics that approximate the optimal solution. Furthermore, the embedding step introduces a potential loss of information, as high-dimensional semantic relationships are compressed into a finite-dimensional vector space.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Related Work}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\textbf{Sentence-BERT} \cite{reimers2019}: Reimers and Gurevych introduced Sentence-BERT, a modification of BERT that produces semantically meaningful sentence embeddings. We use this model as our embedding function $f$. This is directly relevant as it forms the backbone of our text representation step.
+
+\textbf{Louvain Method} \cite{blondel2008}: Blondel et al. proposed the Louvain algorithm for community detection, which greedily optimizes modularity through a hierarchical merging process. It is one of the most widely used community detection algorithms due to its speed and quality, and it achieves the best results in our experiments.
+
+\textbf{Label Propagation} \cite{raghavan2007}: Raghavan et al. introduced Label Propagation, a simple and efficient algorithm where each node adopts the most frequent label among its neighbors. We use it as a fast baseline. In our experiments it suffers from over-fragmentation, consistent with known limitations on large dense graphs.
+
+\textbf{Spectral Clustering} \cite{vonluxburg2007}: Von Luxburg provides a comprehensive tutorial on spectral clustering, which uses the eigenvectors of the graph Laplacian to embed nodes into a low-dimensional space before clustering. We apply it with $k=8$ clusters, matching our number of thematic categories.
+
+\textbf{TextRank} \cite{mihalcea2004}: Mihalcea and Tarau proposed TextRank, an early application of graph-based methods to NLP tasks such as keyword extraction and summarization. Our work is complementary, applying graph mining at the document level rather than the word level.
+
+\textbf{Graph-based Document Clustering} \cite{aggarwal2010}: Aggarwal and Zhai survey graph-based approaches to text mining and document clustering, providing the theoretical foundation for modeling document corpora as similarity graphs. Our project is a direct application of this paradigm.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Methodology}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\subsection{Data Collection}
+
+We collected 1,600 article abstracts from arXiv using the official arXiv Python API. We selected 8 thematic categories and downloaded 200 articles per category:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{arXiv Category} & \textbf{Domain} \\
+\midrule
+cs.CL   & Natural Language Processing \\
+cs.CV   & Computer Vision \\
+cs.RO   & Robotics \\
+cs.CR   & Cybersecurity \\
+quant-ph & Quantum Physics \\
+astro-ph & Astrophysics \\
+q-bio   & Quantitative Biology \\
+econ.EM & Econometrics \\
+\bottomrule
+\end{tabular}
+\caption{The 8 thematic categories used in this project.}
+\end{table}
+
+The categories were deliberately chosen to include both \emph{semantically close} pairs (e.g., cs.CL and cs.CV, both rooted in deep learning) and \emph{semantically distant} pairs (e.g., Astrophysics and Econometrics), in order to stress-test the algorithms across varying levels of difficulty.
+
+The ground-truth arXiv category labels are stored alongside the abstracts but are \textbf{never used during graph construction or community detection}. They serve solely as the reference for final evaluation.
+
+\subsection{Text Embedding}
+
+Each abstract $d_i$ is transformed into a dense vector $\mathbf{e}_i \in \mathbb{R}^{384}$ using the \texttt{all-MiniLM-L6-v2} model from Sentence-BERT \cite{reimers2019}. This model was chosen for its balance between computational efficiency and semantic quality. Unlike TF-IDF, Sentence-BERT produces \emph{contextual} embeddings that capture semantic meaning rather than mere word frequency.
+
+The embeddings are computed in a single batch pass and saved as a NumPy array for reuse in subsequent steps.
+
+\subsection{Graph Construction}
+
+We compute the full cosine similarity matrix $S \in \mathbb{R}^{n \times n}$ where $S_{ij} = \text{sim}(d_i, d_j)$.
+
+Rather than applying a fixed similarity threshold to determine edges — which would leave low-similarity articles isolated — we use a \textbf{$k$-Nearest Neighbors (KNN)} strategy with $k = 10$. For each article $d_i$, we add a weighted edge to its 10 most similar articles (excluding itself). This guarantees that every node has at least $k$ neighbors, producing a connected and sufficiently dense graph amenable to community detection.
+
+The resulting graph has $n = 1,600$ nodes and approximately $11,990$ edges.
+
+\subsection{Community Detection Algorithms}
+
+\subsubsection{Louvain Algorithm}
+
+The Louvain algorithm \cite{blondel2008} operates in two phases repeated iteratively:
+
+\begin{algorithm}[H]
+\caption{Louvain Community Detection}
+\begin{algorithmic}[1]
+\State Initialize: each node $v_i$ is its own community $C_i = \{v_i\}$
+\Repeat
+    \For{each node $v_i$}
+        \For{each neighbor community $C_j$ of $v_i$}
+            \State Compute $\Delta Q$ of moving $v_i$ into $C_j$
+        \EndFor
+        \State Move $v_i$ to the community maximizing $\Delta Q > 0$
+    \EndFor
+    \State Build a new graph where each community becomes a super-node
+\Until{no improvement in $Q$}
+\end{algorithmic}
+\end{algorithm}
+
+The modularity gain $\Delta Q$ of moving node $i$ into community $C$ is:
+\begin{equation}
+    \Delta Q = \left[\frac{\Sigma_{in} + 2k_{i,in}}{2m} - \left(\frac{\Sigma_{tot} + k_i}{2m}\right)^2\right] - \left[\frac{\Sigma_{in}}{2m} - \left(\frac{\Sigma_{tot}}{2m}\right)^2 - \left(\frac{k_i}{2m}\right)^2\right]
+\end{equation}
+where $\Sigma_{in}$ is the sum of weights inside $C$, $\Sigma_{tot}$ is the sum of all weights of edges incident to nodes in $C$, $k_i$ is the degree of node $i$, and $k_{i,in}$ is the sum of weights of edges from $i$ to nodes in $C$.
+
+\subsubsection{Label Propagation}
+
+Label Propagation \cite{raghavan2007} is a simple iterative algorithm:
+
+\begin{algorithm}[H]
+\caption{Label Propagation}
+\begin{algorithmic}[1]
+\State Initialize: assign a unique label $\ell_i = i$ to each node $v_i$
+\Repeat
+    \For{each node $v_i$ in random order}
+        \State $\ell_i \leftarrow \arg\max_\ell |\{v_j \in \mathcal{N}(v_i) : \ell_j = \ell\}|$
+    \EndFor
+\Until{no node changes its label}
+\end{algorithmic}
+\end{algorithm}
+
+\subsubsection{Spectral Clustering}
+
+Spectral Clustering \cite{vonluxburg2007} uses the graph Laplacian $L = D - A$, where $D$ is the degree matrix and $A$ is the adjacency matrix. The algorithm computes the $k$ smallest eigenvectors of $L$, embeds each node into $\mathbb{R}^k$, and applies $k$-means. We set $k = 8$ to match the number of target communities.
+
+\subsection{Why Graph-Based Approaches Outperform Pure Cosine Similarity}
+
+A key contribution of this project is to argue, both theoretically and empirically, that modeling the problem as a graph adds value beyond direct cosine similarity clustering.
+
+\paragraph{Transitivity.} Consider three articles $A$, $B$, $C$ where $\text{sim}(A,B) = 0.8$, $\text{sim}(B,C) = 0.8$, but $\text{sim}(A,C) = 0.5$. A pure similarity-based method would not strongly group $A$ and $C$ together. However, in the graph, both $A$ and $C$ are neighbors of $B$, so community detection algorithms can infer through the path $A \rightarrow B \rightarrow C$ that they belong to the same community.
+
+\paragraph{Global structure.} Algorithms like Louvain optimize a global criterion (modularity) that considers the entire graph topology, not just local pairwise similarities. This allows detection of coherent groups even when individual similarities are noisy.
+
+\paragraph{Robustness to noise.} An article with an atypical abstract may have low direct similarity to its true neighbors. The graph structure allows its indirect connections to pull it into the correct community, acting as a form of regularization.
+
+\subsection{Limitations}
+
+\begin{itemize}
+    \item \textbf{Choice of $k$}: The parameter $k=10$ was chosen empirically. A systematic sensitivity analysis would strengthen the results.
+    \item \textbf{Embedding quality}: The quality of the graph depends entirely on the quality of the embeddings. Domain-specific models might perform better.
+    \item \textbf{Label Propagation instability}: Results vary across runs due to the random node ordering.
+    \item \textbf{Scalability}: The cosine similarity matrix is $O(n^2)$, which becomes prohibitive for very large corpora.
+\end{itemize}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Evaluation}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\subsection{Metrics}
+
+\textbf{Normalized Mutual Information (NMI)} measures how much information the predicted partition $\mathcal{C}$ shares with the true partition $\mathcal{Y}$:
+\begin{equation}
+    \text{NMI}(\mathcal{C}, \mathcal{Y}) = \frac{2 \cdot I(\mathcal{C}; \mathcal{Y})}{H(\mathcal{C}) + H(\mathcal{Y})}
+\end{equation}
+where $I$ is mutual information and $H$ is entropy. NMI $\in [0, 1]$, with 1 indicating perfect agreement.
+
+\textbf{Adjusted Rand Index (ARI)} counts the fraction of correctly grouped and correctly separated pairs, adjusted for chance:
+\begin{equation}
+    \text{ARI} = \frac{\text{RI} - \mathbb{E}[\text{RI}]}{\max(\text{RI}) - \mathbb{E}[\text{RI}]}
+\end{equation}
+ARI $\in [-1, 1]$, with 1 indicating perfect agreement and 0 indicating random assignment.
+
+\subsection{Results}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lccc}
+\toprule
+\textbf{Algorithm} & \textbf{NMI} & \textbf{ARI} & \textbf{Communities Detected} \\
+\midrule
+\textbf{Louvain}        & \textbf{0.8033} & \textbf{0.7641} & 10 \\
+Spectral Clustering      & 0.7991          & 0.7154          & 8  \\
+Label Propagation        & 0.6815          & 0.4526          & 32 \\
+\bottomrule
+\end{tabular}
+\caption{Evaluation results for the three community detection algorithms.}
+\end{table}
+
+\subsection{Analysis}
+
+\paragraph{Louvain} achieves the best results on both metrics. It detected 10 communities instead of the expected 8, suggesting that two thematic categories were split into sub-communities. This is not necessarily a failure — it may reflect genuine sub-topics within a domain (e.g., separating theoretical NLP from applied NLP).
+
+\paragraph{Spectral Clustering} performs very close to Louvain in NMI but slightly lower in ARI, suggesting it makes more pairwise grouping errors. Its advantage is that it produces exactly $k=8$ communities by design, making interpretation straightforward.
+
+\paragraph{Label Propagation} shows significantly lower performance, detecting 32 communities. This over-fragmentation is a known weakness of Label Propagation on dense graphs: the random propagation order leads to unstable assignments and many small isolated communities. Its low ARI (0.45) confirms that many articles that should be grouped together are incorrectly separated.
+
+\paragraph{Graph vs. Pure Cosine Similarity.} The high NMI scores (above 0.68 for all algorithms) demonstrate that the graph structure effectively encodes thematic information. The transitivity property of the graph allows algorithms to group articles that would not be directly linked by a high cosine similarity threshold. This validates our central hypothesis that graph-based methods add value beyond pairwise similarity.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Conclusions}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\subsection{Summary}
+
+This project demonstrated that graph-based community detection can successfully recover thematic groupings of scientific articles from their abstracts, without any supervision. By constructing a KNN similarity graph from Sentence-BERT embeddings and applying community detection algorithms, we achieved a maximum NMI of 0.8033 and ARI of 0.7641 with the Louvain algorithm.
+
+We further argued and empirically supported the claim that graph-based approaches offer advantages over direct cosine similarity clustering, by capturing transitive relationships and exploiting global graph topology through modularity optimization.
+
+\subsection{Key Highlights}
+
+\begin{itemize}
+    \item Louvain is the best algorithm for this task, outperforming both Spectral Clustering and Label Propagation.
+    \item Label Propagation over-fragments the corpus (32 communities), making it unsuitable for this use case.
+    \item The graph structure captures meaningful thematic structure: articles from distant domains (Astrophysics vs. Econometrics) are clearly separated, while semantically close domains (NLP vs. Computer Vision) produce some overlap, which is scientifically interpretable.
+\end{itemize}
+
+\subsection{Future Work}
+
+\begin{itemize}
+    \item \textbf{Embedding models}: Compare Sentence-BERT with TF-IDF, SciBERT \cite{beltagy2019}, or domain-specific models.
+    \item \textbf{Sensitivity analysis}: Study the impact of $k$ on graph density and community quality.
+    \item \textbf{Temporal analysis}: Apply the method to track the evolution of scientific communities over time.
+    \item \textbf{Larger corpora}: Scale to the full arXiv dataset using approximate nearest neighbor methods (e.g., FAISS) to avoid the $O(n^2)$ similarity matrix.
+    \item \textbf{Hybrid approaches}: Combine graph structure with content features directly in the community detection objective.
+\end{itemize}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{References}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{thebibliography}{99}
+
+\bibitem{reimers2019}
+Reimers, N., \& Gurevych, I. (2019).
+\textit{Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks}.
+Proceedings of EMNLP 2019.
+\textbf{Relevance}: Used as the text embedding model to transform article abstracts into dense vectors.
+
+\bibitem{blondel2008}
+Blondel, V. D., Guillaume, J. L., Lambiotte, R., \& Lefebvre, E. (2008).
+\textit{Fast unfolding of communities in large networks}.
+Journal of Statistical Mechanics: Theory and Experiment.
+\textbf{Relevance}: The Louvain algorithm, which achieves the best performance in our experiments.
+
+\bibitem{raghavan2007}
+Raghavan, U. N., Albert, R., \& Kumara, S. (2007).
+\textit{Near linear time algorithm to detect community structures in large-scale networks}.
+Physical Review E.
+\textbf{Relevance}: Label Propagation algorithm used as a fast baseline in our comparison.
+
+\bibitem{vonluxburg2007}
+Von Luxburg, U. (2007).
+\textit{A tutorial on spectral clustering}.
+Statistics and Computing.
+\textbf{Relevance}: Theoretical and practical foundation for the Spectral Clustering algorithm used in this project.
+
+\bibitem{brandes2007}
+Brandes, U., et al. (2007).
+\textit{On modularity clustering}.
+IEEE Transactions on Knowledge and Data Engineering.
+\textbf{Relevance}: Establishes that modularity maximization is NP-hard, justifying the use of heuristic algorithms.
+
+\bibitem{mihalcea2004}
+Mihalcea, R., \& Tarau, P. (2004).
+\textit{TextRank: Bringing Order into Texts}.
+Proceedings of EMNLP 2004.
+\textbf{Relevance}: Pioneering work applying graph-based methods to NLP, complementary to our document-level approach.
+
+\bibitem{aggarwal2010}
+Aggarwal, C. C., \& Zhai, C. (2010).
+\textit{Mining Text Data}.
+Springer.
+\textbf{Relevance}: Provides the theoretical framework for graph-based document clustering that motivates our approach.
+
+\bibitem{beltagy2019}
+Beltagy, I., Lo, K., \& Cohan, A. (2019).
+\textit{SciBERT: A Pretrained Language Model for Scientific Text}.
+Proceedings of EMNLP 2019.
+\textbf{Relevance}: A domain-specific embedding model cited as potential future work to improve embedding quality for scientific text.
+
+\end{thebibliography}
+
+\end{document}
