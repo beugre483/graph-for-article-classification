@@ -34,7 +34,7 @@ graph-for-article-classifi/
 │
 ├── figures/                       # Visualisations et graphiques
 │
-├── 1_collect_data.py              # Collecte des articles depuis arXiv
+├── 1_articles_loader.py              # Collecte des articles depuis arXiv
 ├── 2_embeddings.py                # Génération des embeddings (Sentence-BERT)
 ├── 3_build_graph.py               # Construction du graphe KNN
 ├── 4_community_detection.py       # Détection de communautés
