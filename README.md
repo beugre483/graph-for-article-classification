@@ -115,11 +115,11 @@ poetry install
 Lancer les scripts dans l'ordre :
 
 ```bash
-poetry run python 1_collect_data.py
-poetry run python 2_embeddings.py
-poetry run python 3_build_graph.py
-poetry run python 4_community_detection.py
-poetry run python 5_evaluation.py
+poetry run python article_loader.py
+poetry run python embeddings.py
+poetry run python build_graph.py
+poetry run python community_detection.py
+poetry run python evaluation.py
 ```
 
 Ou en une seule commande avec le point d'entrée :
