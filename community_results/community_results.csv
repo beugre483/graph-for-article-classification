@@ -1,0 +1,1601 @@
+true_label,louvain,label_propagation,spectral_clustering
+NLP,0,0,7
+NLP,0,1,7
+NLP,1,2,3
+NLP,0,0,7
+NLP,0,3,7
+NLP,0,4,7
+NLP,2,5,4
+NLP,0,1,7
+NLP,1,1,7
+NLP,0,3,7
+NLP,0,0,7
+NLP,0,3,7
+NLP,3,4,6
+NLP,0,0,7
+NLP,0,3,7
+NLP,0,1,7
+NLP,4,6,6
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,7,7
+NLP,0,4,7
+NLP,0,3,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,3,7
+NLP,1,1,7
+NLP,3,8,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,7,7
+NLP,7,9,7
+NLP,0,0,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,3,7
+NLP,0,7,7
+NLP,0,7,7
+NLP,0,1,7
+NLP,0,7,7
+NLP,2,5,6
+NLP,0,0,7
+NLP,4,10,6
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,0,7
+NLP,0,1,7
+NLP,0,4,7
+NLP,3,4,7
+NLP,0,1,7
+NLP,0,0,7
+NLP,0,3,7
+NLP,0,0,7
+NLP,0,7,7
+NLP,0,1,7
+NLP,0,7,7
+NLP,0,0,7
+NLP,0,7,7
+NLP,0,0,7
+NLP,0,0,7
+NLP,0,1,7
+NLP,0,3,7
+NLP,0,4,7
+NLP,0,0,7
+NLP,0,4,7
+NLP,0,4,7
+NLP,0,7,7
+NLP,0,0,7
+NLP,0,4,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,7,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,7,7
+NLP,0,4,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,3,7
+NLP,0,0,7
+NLP,0,1,7
+NLP,0,0,7
+NLP,0,7,7
+NLP,0,0,7
+NLP,2,5,4
+NLP,0,4,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,0,7
+NLP,0,1,7
+NLP,0,7,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,0,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,7,7
+NLP,0,1,7
+NLP,0,7,7
+NLP,0,1,7
+NLP,0,0,7
+NLP,3,11,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,3,7
+NLP,0,0,7
+NLP,0,1,7
+NLP,0,4,7
+NLP,0,4,7
+NLP,7,9,7
+NLP,0,1,7
+NLP,0,3,7
+NLP,0,4,7
+NLP,0,0,7
+NLP,0,0,7
+NLP,0,1,7
+NLP,3,4,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,0,7
+NLP,0,3,7
+NLP,0,1,7
+NLP,4,10,6
+NLP,0,7,7
+NLP,0,1,7
+NLP,0,0,7
+NLP,0,1,7
+NLP,0,0,7
+NLP,0,3,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,0,7
+NLP,0,0,7
+NLP,0,1,7
+NLP,0,4,7
+NLP,4,10,6
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,2,5,4
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,0,7
+NLP,0,0,7
+NLP,0,0,7
+NLP,0,1,7
+NLP,0,4,7
+NLP,0,1,7
+NLP,0,7,7
+NLP,0,3,7
+NLP,7,9,7
+NLP,0,7,7
+NLP,0,3,7
+NLP,0,4,7
+NLP,0,1,7
+NLP,0,0,7
+NLP,0,1,7
+NLP,0,7,7
+NLP,0,0,7
+NLP,0,7,7
+NLP,0,4,7
+NLP,0,0,7
+NLP,0,4,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,0,7
+NLP,0,1,7
+NLP,0,3,7
+NLP,0,3,7
+NLP,0,1,7
+NLP,0,7,7
+NLP,0,1,7
+NLP,0,0,7
+NLP,0,1,7
+NLP,0,4,7
+NLP,0,1,7
+NLP,0,0,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,0,1,7
+NLP,3,8,7
+NLP,0,3,7
+NLP,0,4,7
+NLP,0,1,7
+NLP,0,0,7
+NLP,0,1,7
+NLP,0,3,7
+Computer Vision,3,8,6
+Computer Vision,6,12,6
+Computer Vision,3,8,6
+Computer Vision,4,10,6
+Computer Vision,0,11,7
+Computer Vision,3,4,7
+Computer Vision,6,12,6
+Computer Vision,3,8,6
+Computer Vision,3,4,7
+Computer Vision,3,12,6
+Computer Vision,6,12,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,12,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,7
+Computer Vision,6,12,6
+Computer Vision,6,12,6
+Computer Vision,3,8,6
+Computer Vision,7,6,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,7,8,6
+Computer Vision,7,6,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,12,6
+Computer Vision,7,9,0
+Computer Vision,7,6,6
+Computer Vision,7,6,6
+Computer Vision,3,8,6
+Computer Vision,4,10,6
+Computer Vision,3,12,6
+Computer Vision,4,13,6
+Computer Vision,3,8,6
+Computer Vision,4,12,6
+Computer Vision,3,8,6
+Computer Vision,6,12,6
+Computer Vision,7,9,7
+Computer Vision,4,6,6
+Computer Vision,6,12,6
+Computer Vision,7,9,0
+Computer Vision,3,8,6
+Computer Vision,3,1,7
+Computer Vision,6,12,6
+Computer Vision,7,8,6
+Computer Vision,6,12,6
+Computer Vision,7,9,6
+Computer Vision,3,8,6
+Computer Vision,7,6,6
+Computer Vision,6,12,6
+Computer Vision,7,6,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,7,9,6
+Computer Vision,7,14,0
+Computer Vision,3,11,7
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,6,8,6
+Computer Vision,6,12,6
+Computer Vision,3,4,7
+Computer Vision,6,12,6
+Computer Vision,3,8,6
+Computer Vision,7,8,6
+Computer Vision,3,12,6
+Computer Vision,6,12,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,6,12,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,6,12,6
+Computer Vision,7,6,6
+Computer Vision,3,8,7
+Computer Vision,3,12,6
+Computer Vision,6,12,6
+Computer Vision,6,12,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,7,8,6
+Computer Vision,4,10,6
+Computer Vision,0,7,7
+Computer Vision,3,11,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,11,7
+Computer Vision,0,7,7
+Computer Vision,6,12,6
+Computer Vision,3,12,6
+Computer Vision,1,2,3
+Computer Vision,3,8,6
+Computer Vision,3,11,7
+Computer Vision,3,11,7
+Computer Vision,3,8,6
+Computer Vision,6,12,6
+Computer Vision,3,8,6
+Computer Vision,6,12,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,7
+Computer Vision,3,11,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,4,7
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,0,1,7
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,7,9,6
+Computer Vision,7,10,0
+Computer Vision,6,12,6
+Computer Vision,7,6,6
+Computer Vision,7,8,6
+Computer Vision,3,12,6
+Computer Vision,6,12,6
+Computer Vision,3,12,6
+Computer Vision,6,12,6
+Computer Vision,3,12,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,6,12,6
+Computer Vision,7,9,0
+Computer Vision,3,8,6
+Computer Vision,3,12,6
+Computer Vision,6,12,6
+Computer Vision,6,12,6
+Computer Vision,6,12,6
+Computer Vision,7,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,4,8,6
+Computer Vision,3,11,6
+Computer Vision,3,8,6
+Computer Vision,3,11,6
+Computer Vision,3,9,6
+Computer Vision,3,8,6
+Computer Vision,7,6,6
+Computer Vision,8,15,6
+Computer Vision,0,0,7
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,4,10,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,6,12,6
+Computer Vision,0,4,7
+Computer Vision,3,11,6
+Computer Vision,7,9,6
+Computer Vision,3,8,6
+Computer Vision,7,9,6
+Computer Vision,3,8,6
+Computer Vision,7,6,6
+Computer Vision,6,12,6
+Computer Vision,7,6,6
+Computer Vision,7,6,6
+Computer Vision,4,10,6
+Computer Vision,3,8,6
+Computer Vision,3,11,7
+Computer Vision,6,12,6
+Computer Vision,6,12,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,7,6,6
+Computer Vision,3,11,6
+Computer Vision,3,8,6
+Computer Vision,3,11,6
+Computer Vision,3,8,6
+Computer Vision,7,9,0
+Computer Vision,3,8,6
+Computer Vision,6,12,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,4,10,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,12,6
+Computer Vision,6,12,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,3,8,6
+Computer Vision,6,12,6
+Computer Vision,3,8,6
+Robotics,6,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,7,9,0
+Robotics,3,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,7,14,0
+Robotics,6,12,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,16,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,6,10,6
+Robotics,3,8,6
+Robotics,6,12,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,3,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,13,3
+Robotics,6,12,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,6,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,6,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,0,0,7
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,3,8,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,8,15,1
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,7,9,0
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,3,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,10,6
+Robotics,6,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,3,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,10,6
+Robotics,6,12,6
+Robotics,6,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,6,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,7,9,0
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,6,12,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Robotics,4,10,6
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,3,4,7
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,17,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,6,6
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,8,15,1
+Cybersecurity,7,9,6
+Cybersecurity,7,9,0
+Cybersecurity,4,10,6
+Cybersecurity,7,14,0
+Cybersecurity,7,18,0
+Cybersecurity,7,9,0
+Cybersecurity,7,17,0
+Cybersecurity,7,9,0
+Cybersecurity,7,17,0
+Cybersecurity,7,18,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,17,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,17,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,17,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,17,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,14,0
+Cybersecurity,4,10,6
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,8,15,1
+Cybersecurity,7,9,7
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,18,0
+Cybersecurity,7,9,0
+Cybersecurity,7,17,0
+Cybersecurity,7,14,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,6
+Cybersecurity,7,17,0
+Cybersecurity,9,13,6
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,17,0
+Cybersecurity,7,14,0
+Cybersecurity,7,14,0
+Cybersecurity,7,18,0
+Cybersecurity,7,14,0
+Cybersecurity,7,17,0
+Cybersecurity,7,17,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,18,0
+Cybersecurity,7,17,0
+Cybersecurity,7,17,0
+Cybersecurity,8,19,1
+Cybersecurity,7,14,0
+Cybersecurity,7,9,6
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,18,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,18,0
+Cybersecurity,8,15,1
+Cybersecurity,7,18,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,17,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,6
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,17,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,8,6
+Cybersecurity,7,9,0
+Cybersecurity,7,18,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,8,15,1
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,14,0
+Cybersecurity,7,18,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,17,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,7
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,3
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,7
+Cybersecurity,7,9,0
+Cybersecurity,4,10,6
+Cybersecurity,7,14,0
+Cybersecurity,7,14,0
+Cybersecurity,7,17,0
+Cybersecurity,7,18,0
+Cybersecurity,7,14,0
+Cybersecurity,0,1,7
+Cybersecurity,7,9,0
+Cybersecurity,8,15,1
+Cybersecurity,7,14,0
+Cybersecurity,7,17,0
+Cybersecurity,7,9,0
+Cybersecurity,7,14,0
+Cybersecurity,7,14,0
+Cybersecurity,7,14,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Cybersecurity,7,9,0
+Quantum Physics,8,15,1
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,15,1
+Quantum Physics,8,21,1
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,20,1
+Quantum Physics,8,20,1
+Quantum Physics,8,20,1
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,15,1
+Quantum Physics,8,15,1
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,20,1
+Quantum Physics,8,20,1
+Quantum Physics,8,15,1
+Quantum Physics,8,19,1
+Quantum Physics,8,20,1
+Quantum Physics,8,15,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,15,1
+Quantum Physics,8,21,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,15,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,22,1
+Quantum Physics,8,19,1
+Quantum Physics,8,15,1
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,20,1
+Quantum Physics,8,22,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,20,1
+Quantum Physics,8,15,1
+Quantum Physics,8,15,1
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,22,1
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,20,1
+Quantum Physics,8,21,1
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,15,1
+Quantum Physics,8,15,1
+Quantum Physics,8,20,1
+Quantum Physics,8,15,1
+Quantum Physics,8,19,1
+Quantum Physics,8,20,1
+Quantum Physics,8,22,1
+Quantum Physics,8,22,1
+Quantum Physics,8,19,1
+Quantum Physics,8,15,1
+Quantum Physics,8,15,1
+Quantum Physics,8,19,1
+Quantum Physics,8,15,1
+Quantum Physics,8,15,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,20,1
+Quantum Physics,8,22,1
+Quantum Physics,8,19,1
+Quantum Physics,8,15,1
+Quantum Physics,8,15,1
+Quantum Physics,8,15,1
+Quantum Physics,8,20,1
+Quantum Physics,8,15,1
+Quantum Physics,8,20,1
+Quantum Physics,8,15,1
+Quantum Physics,8,15,1
+Quantum Physics,8,20,1
+Quantum Physics,8,15,1
+Quantum Physics,8,15,1
+Quantum Physics,8,20,1
+Quantum Physics,8,15,1
+Quantum Physics,8,19,1
+Quantum Physics,8,20,1
+Quantum Physics,8,15,1
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,22,1
+Quantum Physics,8,20,1
+Quantum Physics,8,15,1
+Quantum Physics,8,15,1
+Quantum Physics,5,23,2
+Quantum Physics,8,19,1
+Quantum Physics,8,21,1
+Quantum Physics,8,20,1
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,15,1
+Quantum Physics,8,20,1
+Quantum Physics,2,5,4
+Quantum Physics,8,20,1
+Quantum Physics,8,20,1
+Quantum Physics,8,20,1
+Quantum Physics,8,21,1
+Quantum Physics,8,16,1
+Quantum Physics,8,15,1
+Quantum Physics,8,22,1
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,21,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,20,1
+Quantum Physics,8,15,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,21,1
+Quantum Physics,2,24,1
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,15,1
+Quantum Physics,8,22,1
+Quantum Physics,8,22,1
+Quantum Physics,8,22,1
+Quantum Physics,8,15,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,20,1
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,20,1
+Quantum Physics,8,22,1
+Quantum Physics,8,15,1
+Quantum Physics,8,21,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,20,1
+Quantum Physics,8,15,1
+Quantum Physics,8,20,1
+Quantum Physics,8,20,1
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,5,25,2
+Quantum Physics,8,19,1
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,8,15,1
+Quantum Physics,8,15,1
+Quantum Physics,8,19,1
+Quantum Physics,8,22,1
+Quantum Physics,8,20,1
+Quantum Physics,8,21,1
+Quantum Physics,8,15,1
+Quantum Physics,8,15,1
+Quantum Physics,8,15,1
+Quantum Physics,8,15,1
+Quantum Physics,8,15,1
+Quantum Physics,8,22,1
+Quantum Physics,8,22,1
+Quantum Physics,8,19,1
+Quantum Physics,8,15,1
+Quantum Physics,5,26,2
+Quantum Physics,8,20,1
+Quantum Physics,8,19,1
+Quantum Physics,8,15,1
+Quantum Physics,8,19,1
+Quantum Physics,8,19,1
+Quantum Physics,3,8,6
+Quantum Physics,8,20,1
+Quantum Physics,8,15,1
+Quantum Physics,8,20,1
+Quantum Physics,8,22,1
+Quantum Physics,8,19,1
+Quantum Physics,8,15,1
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,25,2
+Astrophysics,5,25,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,23,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,23,2
+Astrophysics,5,26,2
+Astrophysics,5,23,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,23,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,23,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,23,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,23,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,8,22,1
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,25,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,23,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,23,2
+Astrophysics,5,26,2
+Astrophysics,5,23,2
+Astrophysics,5,25,2
+Astrophysics,5,25,2
+Astrophysics,5,25,2
+Astrophysics,5,23,2
+Astrophysics,5,25,2
+Astrophysics,5,23,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,23,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,1,2,3
+Astrophysics,5,23,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,23,2
+Astrophysics,5,25,2
+Astrophysics,5,23,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,25,2
+Astrophysics,5,26,2
+Astrophysics,5,26,2
+Astrophysics,5,23,2
+Astrophysics,5,26,2
+Quantitative Biology,9,27,5
+Quantitative Biology,2,5,4
+Quantitative Biology,2,13,6
+Quantitative Biology,9,27,5
+Quantitative Biology,9,16,5
+Quantitative Biology,2,24,4
+Quantitative Biology,2,24,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,24,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,9,28,5
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,24,4
+Quantitative Biology,2,29,6
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,29,1
+Quantitative Biology,2,24,4
+Quantitative Biology,2,24,4
+Quantitative Biology,2,24,6
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,9,28,5
+Quantitative Biology,2,24,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,4,10,6
+Quantitative Biology,2,24,4
+Quantitative Biology,2,24,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,9,29,5
+Quantitative Biology,2,5,4
+Quantitative Biology,2,24,4
+Quantitative Biology,2,29,1
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,29,6
+Quantitative Biology,2,5,4
+Quantitative Biology,2,29,6
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,9,28,5
+Quantitative Biology,9,16,5
+Quantitative Biology,2,5,4
+Quantitative Biology,1,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,9,28,5
+Quantitative Biology,9,27,5
+Quantitative Biology,2,5,4
+Quantitative Biology,9,16,5
+Quantitative Biology,2,24,4
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,28,5
+Quantitative Biology,9,28,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,28,5
+Quantitative Biology,9,16,5
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,2,24,4
+Quantitative Biology,9,28,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,29,5
+Quantitative Biology,2,24,4
+Quantitative Biology,9,28,5
+Quantitative Biology,2,5,4
+Quantitative Biology,1,30,3
+Quantitative Biology,2,5,4
+Quantitative Biology,2,24,4
+Quantitative Biology,9,28,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,28,5
+Quantitative Biology,9,28,5
+Quantitative Biology,9,28,5
+Quantitative Biology,9,28,5
+Quantitative Biology,2,24,4
+Quantitative Biology,2,24,1
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,2,24,4
+Quantitative Biology,9,16,5
+Quantitative Biology,9,27,5
+Quantitative Biology,9,28,5
+Quantitative Biology,9,27,5
+Quantitative Biology,9,28,5
+Quantitative Biology,2,5,4
+Quantitative Biology,2,29,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,29,4
+Quantitative Biology,2,24,6
+Quantitative Biology,2,24,4
+Quantitative Biology,9,28,5
+Quantitative Biology,9,28,5
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,24,5
+Quantitative Biology,9,28,5
+Quantitative Biology,9,28,5
+Quantitative Biology,2,5,4
+Quantitative Biology,9,28,5
+Quantitative Biology,2,24,4
+Quantitative Biology,9,16,5
+Quantitative Biology,2,24,1
+Quantitative Biology,9,28,5
+Quantitative Biology,2,24,4
+Quantitative Biology,2,5,4
+Quantitative Biology,9,16,5
+Quantitative Biology,9,28,5
+Quantitative Biology,9,28,5
+Quantitative Biology,9,28,5
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,2,24,6
+Quantitative Biology,2,5,4
+Quantitative Biology,9,28,5
+Quantitative Biology,2,24,1
+Quantitative Biology,9,16,5
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,9,16,5
+Quantitative Biology,9,28,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,28,5
+Quantitative Biology,9,16,5
+Quantitative Biology,2,24,4
+Quantitative Biology,9,16,5
+Quantitative Biology,9,28,5
+Quantitative Biology,2,5,4
+Quantitative Biology,2,24,4
+Quantitative Biology,9,16,5
+Quantitative Biology,2,5,4
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,28,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,2,24,4
+Quantitative Biology,2,24,4
+Quantitative Biology,9,16,5
+Quantitative Biology,2,24,4
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,28,5
+Quantitative Biology,9,28,5
+Quantitative Biology,9,16,5
+Quantitative Biology,2,5,4
+Quantitative Biology,2,5,4
+Quantitative Biology,9,28,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,28,5
+Quantitative Biology,2,24,4
+Quantitative Biology,2,24,4
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Quantitative Biology,9,16,5
+Econometrics,2,5,4
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,4,10,6
+Econometrics,1,13,3
+Econometrics,1,13,3
+Econometrics,0,4,7
+Econometrics,1,13,3
+Econometrics,1,13,3
+Econometrics,1,31,3
+Econometrics,1,2,3
+Econometrics,1,31,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,30,3
+Econometrics,1,31,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,30,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,30,3
+Econometrics,1,30,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,30,3
+Econometrics,1,31,3
+Econometrics,1,30,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,30,3
+Econometrics,1,30,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,30,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,30,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,30,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,31,6
+Econometrics,4,10,6
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,30,3
+Econometrics,1,31,6
+Econometrics,1,13,3
+Econometrics,0,4,7
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,13,3
+Econometrics,1,30,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,30,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,30,3
+Econometrics,7,9,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,7,17,0
+Econometrics,1,30,3
+Econometrics,4,10,6
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,7,10,6
+Econometrics,1,30,3
+Econometrics,1,13,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,30,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,30,3
+Econometrics,1,30,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,30,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,7
+Econometrics,1,31,3
+Econometrics,1,30,3
+Econometrics,1,30,3
+Econometrics,1,30,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,31,3
+Econometrics,1,13,3
+Econometrics,1,13,3
+Econometrics,1,30,3
+Econometrics,1,31,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,31,3
+Econometrics,1,13,3
+Econometrics,1,13,3
+Econometrics,4,10,6
+Econometrics,1,31,3
+Econometrics,1,30,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,1,7
+Econometrics,1,2,3
+Econometrics,1,30,3
+Econometrics,1,30,3
+Econometrics,1,2,1
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,13,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,30,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,30,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,13,3
+Econometrics,1,2,3
+Econometrics,1,2,3
+Econometrics,1,2,3

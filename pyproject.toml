@@ -1,0 +1,22 @@
+[project]
+name = "graph-for-article-classification"
+version = "0.1.0"
+description = "use community detection for document classification"
+authors = [
+    {name = "beugre483",email = "beugreniamba904@gmail.com"}
+]
+requires-python = ">=3.11,<3.14.1 "
+dependencies = [
+    "arxiv (>=2.4.0,<3.0.0)",
+    "pandas (>=3.0.1,<4.0.0)",
+    "sentence-transformers (>=5.2.3,<6.0.0)",
+    "networkx (>=3.6.1,<4.0.0)",
+    "matplotlib (>=3.10.8,<4.0.0)",
+    "community (>=1.0.0b1,<2.0.0)",
+    "python-louvain (>=0.16,<0.17)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

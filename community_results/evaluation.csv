@@ -1,0 +1,4 @@
+algorithme,NMI,ARI
+louvain,0.8033,0.7641
+label_propagation,0.6815,0.4526
+spectral_clustering,0.7991,0.7154
