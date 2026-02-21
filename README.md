@@ -110,7 +110,7 @@ poetry install
 
 ---
 
-## 🚀 Exécution
+##  Exécution
 
 Lancer les scripts dans l'ordre :
 
@@ -122,11 +122,6 @@ poetry run python community_detection.py
 poetry run python evaluation.py
 ```
 
-Ou en une seule commande avec le point d'entrée :
-
-```bash
-poetry run python main.py
-```
 
 ---
 
